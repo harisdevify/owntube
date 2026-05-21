@@ -8,8 +8,11 @@
   "license": "ISC",
   "author": "M Haris",
   "type": "module",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": ""
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
