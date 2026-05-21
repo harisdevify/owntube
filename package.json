@@ -1,0 +1,15 @@
+{
+  "name": "owntube",
+  "version": "1.0.0",
+  "description": "pro backend dev learning ",
+  "keywords": [
+    "javascript backend"
+  ],
+  "license": "ISC",
+  "author": "M Haris",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": ""
+  }
+}
