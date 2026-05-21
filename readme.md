@@ -1,5 +1,3 @@
-# OwnTube Project
+# Project: OwnTube
 
-## Making a Project like Youtube
-
-i will provide a link after which you will see here
+Making a Project like Youtube
