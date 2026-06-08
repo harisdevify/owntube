@@ -5,15 +5,37 @@
   "keywords": [
     "javascript backend"
   ],
+  "homepage": "https://github.com/harisdevify/owntube#readme",
+  "bugs": {
+    "url": "https://github.com/harisdevify/owntube/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harisdevify/owntube.git"
+  },
   "license": "ISC",
   "author": "M Haris",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon --exec tsx src/server.js"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
   },
   "devDependencies": {
+    "@types/node": "^25.9.2",
+    "@types/pg": "^8.20.0",
     "nodemon": "^3.1.14",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "prisma": "^7.8.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
   }
 }
