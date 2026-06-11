@@ -1,9 +1,10 @@
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
-import { prisma } from "./lib/prisma.ts";
-import { hasPublishedPost } from "./middlewares/hasPublishedPost.js";
+import { errorHandler } from "./middlewares/error.middleware.js";
+import userRoutes from "./routes/user.route.js";
 const app = express();
+
 // Middlewares
 app.use(
   cors({
@@ -16,17 +17,15 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
-app.get("/api/v1/users/:id", hasPublishedPost, async (req, res) => {
-  const userId = Number(req.params.id);
-  const user = await prisma.user.findUnique({
-    where: {
-      id: userId,
-    },
-    include: {
-      posts: true,
-    },
-  });
-
-  res.json(user);
+// hello world test
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
 });
+
+// user routes
+app.use("/api/v1/users", userRoutes);
+
+// global error
+app.use(errorHandler);
+
 export { app };
